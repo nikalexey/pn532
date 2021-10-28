@@ -129,12 +129,12 @@ void App::InitPN532() {
 
   uint32_t versiondata = nfc.getFirmwareVersion();
   if (!versiondata) {
-    // display.clearDisplay();
-    // display.setTextSize(2);
-    // display.setTextColor(SSD1306_WHITE);
-    // display.setCursor(1, 1);
-    // display.print("Error init pn532");
-    // display.display();
+    display.clearDisplay();
+    display.setTextSize(2);
+    display.setTextColor(SSD1306_WHITE);
+    display.setCursor(1, 1);
+    display.print("Error init pn532");
+    display.display();
     Serial.println("Error init pn532");
     while (1)
       ;  // halt
